@@ -1,6 +1,7 @@
 from .base import BaseReranker, register_reranker
 import logging
 import warnings
+from sentence_transformers import SentenceTransformer
 import numpy as np
 @register_reranker("local")
 class LocalReranker(BaseReranker):
