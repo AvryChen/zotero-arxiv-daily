@@ -9,7 +9,7 @@ class LocalReranker(BaseReranker):
         if not self.config.executor.debug:
             from transformers.utils import logging as transformers_logging
             from huggingface_hub.utils import logging as hf_logging
-            from sentence_transformers import SentenceTransformer
+            
     
             transformers_logging.set_verbosity_error()
             hf_logging.set_verbosity_error()
