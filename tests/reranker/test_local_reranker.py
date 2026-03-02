@@ -1,4 +1,5 @@
 from zotero_arxiv_daily.reranker.local import LocalReranker
+from sentence_transformers import SentenceTransformer
 
 def test_local_reranker(config):
     reranker = LocalReranker(config)
