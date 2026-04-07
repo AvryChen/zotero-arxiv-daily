@@ -48,7 +48,7 @@ class Paper:
                 },
                 {"role": "user", "content": prompt},
             ],
-            **dict(llm_params.get('generation_kwargs', {}))
+            **llm_params.get('generation_kwargs', {})
         )
         tldr = response.choices[0].message.content
         return tldr
@@ -80,7 +80,7 @@ class Paper:
                     },
                     {"role": "user", "content": prompt},
                 ],
-                **dict(llm_params.get('generation_kwargs', {}))
+                **llm_params.get('generation_kwargs', {})
             )
             affiliations = affiliations.choices[0].message.content
 
